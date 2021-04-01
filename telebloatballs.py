@@ -70,7 +70,7 @@ msg=""
 cc="+30"
 for arg in range(0,len(sys.argv)):
     if  "-" in sys.argv[arg] and sys.argv[arg] not in r_args:
-        print("run 'sudo python3 telebloatballs.py -help' interminal ...")
+        print("run 'sudo python3 telebloatballs.py -help' in terminal ...")
         break
     if sys.argv[arg-1]=="-m":
         missed=True
@@ -114,7 +114,7 @@ def modemport():
     while fmodem[pos1]!=" ":
         nmodem+=fmodem[pos1]
         pos1+=1
-    primaryport='|   primary port:'
+    primaryport='|      primary port:'
     #print(nmodem)
     fport=subprocess.check_output("sudo mmcli -m "+nmodem+" | grep '"+primaryport+"'", shell=True).decode("utf-8")
     enable=subprocess.check_output("sudo mmcli -m "+nmodem+" -e", shell=True).decode("utf-8")
@@ -126,7 +126,7 @@ ser = serial.Serial(port,baudrate=9600,timeout=0.05)
 if enablestartsnum==False:
     numstarts=["693"]
 snums=['0','1','2','3','4','5','6','7','8','9']
-def randomnum():
+def    randomnum():
     rnum=numstarts[random.randint(0,len(numstarts)-1)]
     if len(rnum)==2:
         rint=8
@@ -144,12 +144,12 @@ def checkstarts(mbl):
         if mbl.startswith(x):
             return True
     return False
-def advancedcall(mobile):
+def    advancedcall(mobile):
     g=False
     ser.write('ATZ\r'.encode())
     ser.write(('ATD '+mobile+';\r').encode())
-    tnow = datetime.datetime.now()
-    current_time = tnow.strftime("%H:%M:%S")
+    tnow =    datetime.datetime.now()
+    current_time =    tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Advanced Call To : ","green",attrs=['bold'])+mobile)
     time.sleep(5)
     counter=0
@@ -219,8 +219,8 @@ def sendsms(msg):
     ser.write(('AT+CMGS="'+number+'"\r').encode())
     time.sleep(1)
     ser.write((msg+chr(26)+'"\r').encode())
-    tnow = datetime.datetime.now()
-    current_time = tnow.strftime("%H:%M:%S")
+    tnow =    datetime.datetime.now()
+    current_time =    tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Send SMS To : ","grey",attrs=['bold'])+number)
 def listlen():
     if os.path.exists(outfile):
@@ -283,8 +283,8 @@ while True:
                 listlen()
             data = ser.read(1024)
             data+= ser.read(ser.inWaiting())
-            '''if data.decode()!="":
-                print (data)'''
+            #if data.decode()!="":
+                #print (data)
             mdata=data.decode()
             mdata2=data.decode()
             mfind='"REC READ",'
@@ -346,8 +346,8 @@ while True:
                     while decdata[pos]!='"':
                         phonenumber+=decdata[pos]
                         pos+=1
-                tnow = datetime.datetime.now()
-                current_time = tnow.strftime("%H:%M:%S")
+                tnow    = datetime.datetime.now()
+                current_time    = tnow.strftime("%H:%M:%S")
                 print ("["+colored(current_time,"blue")+"] "+colored("Incoming Call From : ", 'blue',attrs=['bold'])+phonenumber.replace(cc,""))
                 phonenumber=phonenumber.replace(cc,"")
                 if (phonenumber!="Uknown") and checkstarts(phonenumber)==True:
