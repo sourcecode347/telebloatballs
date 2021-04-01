@@ -144,12 +144,12 @@ def checkstarts(mbl):
         if mbl.startswith(x):
             return True
     return False
-def    advancedcall(mobile):
+def advancedcall(mobile):
     g=False
     ser.write('ATZ\r'.encode())
     ser.write(('ATD '+mobile+';\r').encode())
-    tnow =    datetime.datetime.now()
-    current_time =    tnow.strftime("%H:%M:%S")
+    tnow = datetime.datetime.now()
+    current_time = tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Advanced Call To : ","green",attrs=['bold'])+mobile)
     time.sleep(5)
     counter=0
@@ -192,7 +192,7 @@ def    advancedcall(mobile):
 def missedcall(mobile):
     ser.write('ATZ\r'.encode())
     ser.write(('ATD '+mobile+';\r').encode())
-    tnow =    datetime.datetime.now()
+    tnow = datetime.datetime.now()
     current_time = tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Missed Call To : ","green",attrs=['bold'])+mobile)
     time.sleep(5)
@@ -219,8 +219,8 @@ def sendsms(msg):
     ser.write(('AT+CMGS="'+number+'"\r').encode())
     time.sleep(1)
     ser.write((msg+chr(26)+'"\r').encode())
-    tnow =    datetime.datetime.now()
-    current_time =    tnow.strftime("%H:%M:%S")
+    tnow = datetime.datetime.now()
+    current_time = tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Send SMS To : ","grey",attrs=['bold'])+number)
 def listlen():
     if os.path.exists(outfile):
@@ -346,8 +346,8 @@ while True:
                     while decdata[pos]!='"':
                         phonenumber+=decdata[pos]
                         pos+=1
-                tnow    = datetime.datetime.now()
-                current_time    = tnow.strftime("%H:%M:%S")
+                tnow = datetime.datetime.now()
+                current_time = tnow.strftime("%H:%M:%S")
                 print ("["+colored(current_time,"blue")+"] "+colored("Incoming Call From : ", 'blue',attrs=['bold'])+phonenumber.replace(cc,""))
                 phonenumber=phonenumber.replace(cc,"")
                 if (phonenumber!="Uknown") and checkstarts(phonenumber)==True:
