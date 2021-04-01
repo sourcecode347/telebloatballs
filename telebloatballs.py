@@ -308,7 +308,7 @@ while True:
             if len(mnumbers)>0:
                 for x in mnumbers:
                     if checkstarts(x)==True:
-                        if    x not in open(outfile).read():
+                        if x not in open(outfile).read():
                             with open(outfile, "a") as myfile:
                                 myfile.write(x+"\r\n")
             mdata=mdata2
