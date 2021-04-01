@@ -5,8 +5,11 @@ Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
 # Requirements #
 pip instal pyserial
+
 pip install termcolor
+
 pip install colorama
+
 python telebloatballs.py --help
 
 # License #
