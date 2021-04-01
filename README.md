@@ -1,7 +1,7 @@
 # telebloatballs
 Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
-https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png
+<img src="https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png" style="width:80%;height:auto;"/>
 
 
 # License #
