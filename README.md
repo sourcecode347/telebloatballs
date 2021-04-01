@@ -3,6 +3,11 @@ Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
 <img src="https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png" style="width:80%;height:auto;"/>
 
+# Requirements #
+pip instal pyserial
+pip install termcolor
+pip install colorama
+python telebloatballs.py --help
 
 # License #
 
