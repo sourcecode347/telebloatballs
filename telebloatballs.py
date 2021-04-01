@@ -122,11 +122,11 @@ def modemport():
     return fport
 if manualport==False:
     port=modemport() 
-ser    = serial.Serial(port,baudrate=9600,timeout=0.05)
+ser = serial.Serial(port,baudrate=9600,timeout=0.05)
 if enablestartsnum==False:
     numstarts=["693"]
 snums=['0','1','2','3','4','5','6','7','8','9']
-def    randomnum():
+def randomnum():
     rnum=numstarts[random.randint(0,len(numstarts)-1)]
     if len(rnum)==2:
         rint=8
@@ -144,12 +144,12 @@ def checkstarts(mbl):
         if mbl.startswith(x):
             return True
     return False
-def    advancedcall(mobile):
+def advancedcall(mobile):
     g=False
     ser.write('ATZ\r'.encode())
     ser.write(('ATD '+mobile+';\r').encode())
-    tnow =    datetime.datetime.now()
-    current_time =    tnow.strftime("%H:%M:%S")
+    tnow = datetime.datetime.now()
+    current_time = tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Advanced Call To : ","green",attrs=['bold'])+mobile)
     time.sleep(5)
     counter=0
@@ -219,8 +219,8 @@ def sendsms(msg):
     ser.write(('AT+CMGS="'+number+'"\r').encode())
     time.sleep(1)
     ser.write((msg+chr(26)+'"\r').encode())
-    tnow =    datetime.datetime.now()
-    current_time =    tnow.strftime("%H:%M:%S")
+    tnow = datetime.datetime.now()
+    current_time = tnow.strftime("%H:%M:%S")
     print("["+colored(current_time,"blue")+"] "+colored("Send SMS To : ","grey",attrs=['bold'])+number)
 def listlen():
     if os.path.exists(outfile):
@@ -346,8 +346,8 @@ while True:
                     while decdata[pos]!='"':
                         phonenumber+=decdata[pos]
                         pos+=1
-                tnow    = datetime.datetime.now()
-                current_time    = tnow.strftime("%H:%M:%S")
+                tnow = datetime.datetime.now()
+                current_time = tnow.strftime("%H:%M:%S")
                 print ("["+colored(current_time,"blue")+"] "+colored("Incoming Call From : ", 'blue',attrs=['bold'])+phonenumber.replace(cc,""))
                 phonenumber=phonenumber.replace(cc,"")
                 if (phonenumber!="Uknown") and checkstarts(phonenumber)==True:
