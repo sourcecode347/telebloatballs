@@ -126,7 +126,7 @@ ser = serial.Serial(port,baudrate=9600,timeout=0.05)
 if enablestartsnum==False:
     numstarts=["693"]
 snums=['0','1','2','3','4','5','6','7','8','9']
-def    randomnum():
+def randomnum():
     rnum=numstarts[random.randint(0,len(numstarts)-1)]
     if len(rnum)==2:
         rint=8
@@ -138,7 +138,7 @@ def    randomnum():
         rint=5
     for x in range(0,rint):
         rnum+=snums[random.randint(0,len(snums)-1)]
-    return    rnum
+    return rnum
 def checkstarts(mbl):
     for x in numstarts:
         if mbl.startswith(x):
