@@ -13,8 +13,11 @@ pip install termcolor
 pip install colorama
 
 if you are in linux system:
+
      sudo apt install modemmanager
+     
 if you are not in linux or your gsm modem not supported by org.freedesktop.modemmanager:
+
      use -p COM*
 
 python telebloatballs.py -help
