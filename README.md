@@ -1,6 +1,8 @@
 # telebloatballs
 Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
+Download the Master Branch
+
 <img src="https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png" style="width:80%;height:auto;"/>
 
 # Requirements #
@@ -10,7 +12,12 @@ pip install termcolor
 
 pip install colorama
 
-python telebloatballs.py --help
+if you are in linux system:
+     sudo apt install modemmanager
+if you are not in linux or your gsm modem not supported by org.freedesktop.modemmanager:
+     use -p COM*
+
+python telebloatballs.py -help
 
 # License #
 
