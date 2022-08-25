@@ -8,13 +8,13 @@ Download Master Branch ;)
 # Requirements #
 pip instal pyserial
 
-pip install termcolor
+    pip install termcolor
 
-pip install colorama
+    pip install colorama
 
-sudo  apt install modemmanager
+    sudo  apt install modemmanager
 
-python telebloatballs.py -help
+    python telebloatballs.py -help
 
 if not autodetected your gsm modem use -p /dev/ttyUSB*
 You can run pyport.py to detect your port.
