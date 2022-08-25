@@ -12,7 +12,7 @@ pip instal pyserial
 
     pip install colorama
 
-    sudo  apt install modemmanager
+    sudo apt install modemmanager
 
     python telebloatballs.py -help
 
