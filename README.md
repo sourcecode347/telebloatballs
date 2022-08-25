@@ -6,11 +6,12 @@ Download the Master Branch
 <img src="https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png" style="width:80%;height:auto;"/>
 
 # Requirements #
-pip instal pyserial
 
-pip install termcolor
+     pip install pyserial
 
-pip install colorama
+     pip install termcolor
+
+     pip install colorama
 
 if you are in linux system:
 
