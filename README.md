@@ -21,7 +21,7 @@ if you are not in linux or your gsm modem not supported by org.freedesktop.modem
 
      use -p COM*
 
-python telebloatballs.py -help
+     python telebloatballs.py -help
 
 # License #
 
