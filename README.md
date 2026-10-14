@@ -1,27 +1,26 @@
 # telebloatballs
 Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
-Download the Master Branch
-
 <img src="https://github.com/sourcecode347/telebloatballs/blob/main/TeleBloatBalls-20.01.png" style="width:80%;height:auto;"/>
 
 # Requirements #
+    
+    pip3 instal pyserial
 
-     pip install pyserial
+    pip3 install termcolor
 
-     pip install termcolor
+    pip3 install colorama
 
-     pip install colorama
+    sudo apt install modemmanager
 
-if you are in linux system:
+    sudo apt install modem-manager-gui
+    
+    python telebloatballs.py --help
 
-     sudo apt install modemmanager
-     
-if you are not in linux or your gsm modem not supported by org.freedesktop.modemmanager:
+Run modem-manager-gui & Enable modem & Execute telebloatballs.py as sudo
 
-     use -p COM*
-
-     python telebloatballs.py -help
+Use -p /dev/ttyUSB*
+You can run pyport.py to detect your port or you can view it on modem-manager-gui.
 
 # License #
 
