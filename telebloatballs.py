@@ -145,7 +145,6 @@ def checkstarts(mbl):
 			return True
 	return False
 def normalize_number(number: str) -> str:
-    """Καθαρίζει έναν αριθμό: αφαιρεί κενά, παύλες, παρενθέσεις κλπ. Κρατάει μόνο ψηφία."""
     cleaned = re.sub(r'\D', '', number.strip())
     return cleaned if cleaned else ""
 def	snapsms(number,outfile=outfile):
