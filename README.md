@@ -15,12 +15,12 @@ Detect Mobiles Numbers with GSM Modem and Start SMS Campaigns
 
     sudo apt install modem-manager-gui
     
-    Run modem-manager-gui & Enable modem & Execute telebloatballs.py as sudo
-    
     python telebloatballs.py --help
 
-if not autodetected your gsm modem use -p /dev/ttyUSB*
-You can run pyport.py to detect your port.
+Run modem-manager-gui & Enable modem & Execute telebloatballs.py as sudo
+
+Use -p /dev/ttyUSB*
+You can run pyport.py to detect your port or you can view it on modem-manager-gui.
 
 # License #
 
