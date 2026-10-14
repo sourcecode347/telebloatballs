@@ -264,7 +264,7 @@ while True:
 		if advanced==True:
 			advancedcall(randomnum())
 		if missed==True:
-			for x in range(5):
+			for x in range(missedcounter):
 				missedcall(randomnum())
 		if enablesms==True:
 			smscount=0
